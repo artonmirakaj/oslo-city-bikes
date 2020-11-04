@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Availability from './components/Availability';
+import FreeSpots from './components/FreeSpots';
+import Stations from './components/Stations';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h2 className='d-flex justify-content-center'>Oslo City Bikes</h2>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-sm'>
+            <h4 className='d-flex justify-content-center'>Station Name</h4>
+            <Stations />
+          </div>
+          <div class='col-sm'>
+            <h4 className='d-flex justify-content-center'>Available Bikes</h4>
+            <Availability />
+          </div>
+          <div class='col-sm'>
+            <h4 className='d-flex justify-content-center'>Free Spots</h4>
+            <FreeSpots />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
